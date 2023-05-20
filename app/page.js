@@ -1,101 +1,33 @@
+import Casestudies from "@components/Casestudies";
+import Hero from "@components/Hero";
+import HomeAppHeader from "@components/HomeAppHeader";
 import Navbar from "@components/Navbar";
+import Services from "@components/Services";
 import Technologies from "@components/Technologies";
 
+
 export default function Home() {
-  return (
-   <>
 
-   {/* hero section  */}
-   <section className="innbits-hero position-relative">
- 
-    <img src="/images/home/herogradient.svg" alt="" className="img-fluid hero-img" />
-    <div className="hero-gradient"></div>
 
-     <div className="container-box h-100">
-      <div className="row d-flex align-items-end h-100">
-        <div className="hero-content">
-        <h1 className="text-white hero-heading mb-0 pb-0">Dive Headfirst Into</h1>
-        <h2 className="text-white hero-heading-two">The Decade Of Digital</h2>
-        <button className="btn hero-btn mt-3">
-          Contact Us
-        </button>
-        </div>
+return (
+<>
+<HomeAppHeader />
 
-        <div className="container hero-bottom">
-        <div className="swiper mt-n2 mb-xl-2 mx-n2 swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden" data-swiper-options="{
-    &quot;pagination&quot;: {
-      &quot;el&quot;: &quot;.swiper-pagination&quot;,
-      &quot;clickable&quot;: true
-    },
-    &quot;breakpoints&quot;: {
-      &quot;0&quot;: {
-        &quot;slidesPerView&quot;: 2,
-        &quot;spaceBetween&quot;: 4
-      },
-      &quot;600&quot;: {
-        &quot;slidesPerView&quot;: 3,
-        &quot;spaceBetween&quot;: 16
-      },
-      &quot;991&quot;: {
-        &quot;slidesPerView&quot;: 4,
-        &quot;spaceBetween&quot;: 24
-      },
-      &quot;1200&quot;: {
-        &quot;slidesPerView&quot;: 5,
-        &quot;spaceBetween&quot;: 38
-      }
-    }
-  }">
-  <div className="swiper-wrapper" id="swiper-wrapper-10e4f476a745d562" aria-live="polite" style={{transform: 'translate3d(0px, 0px, 0px)'}}>
-    {/* Swiper item */}
-    <div className="swiper-slide h-auto py-2 swiper-slide-active" role="group" aria-label="1 / 5" style={{width: '198.8px', marginRight: 38}}>
-      <a href="#" className="card card-body card-hover h-100 py-sm-4 py-3 px-3 mx-2 border-0 shadow-sm rounded-pill">
-        <img src="https://silicon.createx.studio/assets/img/landing/saas-4/integrations/01-light.png" className="d-dark-mode-none d-block my-sm-0 my-1 mx-auto" width={153} alt="Brand" />
-        <img src="https://silicon.createx.studio/assets/img/landing/saas-4/integrations/01-light.png" className="d-dark-mode-block d-none my-sm-0 my-1 mx-auto" width={153} alt="Brand" />
-      </a>
-    </div>
-    {/* Swiper item */}
-    <div className="swiper-slide h-auto py-2 swiper-slide-next" role="group" aria-label="2 / 5" style={{width: '198.8px', marginRight: 38}}>
-      <a href="#" className="card card-body card-hover h-100 py-sm-4 py-3 px-3 mx-2 border-0 shadow-sm rounded-pill">
-        <img src="https://silicon.createx.studio/assets/img/landing/saas-4/integrations/02-light.png" className="d-dark-mode-none d-block my-sm-0 my-1 mx-auto mb-n2" width={121} alt="Brand" />
-        <img src="https://silicon.createx.studio/assets/img/landing/saas-4/integrations/02-light.png" className="d-dark-mode-block d-none my-sm-0 my-1 mx-auto mb-n2" width={121} alt="Brand" />
-      </a>
-    </div>
-    {/* Swiper item */}
-    <div className="swiper-slide h-auto py-2" role="group" aria-label="3 / 5" style={{width: '198.8px', marginRight: 38}}>
-      <a href="#" className="card card-body card-hover h-100 py-sm-4 py-3 px-3 mx-2 border-0 shadow-sm rounded-pill">
-        <img src="https://silicon.createx.studio/assets/img/landing/saas-4/integrations/03-light.png" className="d-dark-mode-none d-block my-sm-0 my-1 mx-auto" width={128} alt="Brand" />
-        <img src="https://silicon.createx.studio/assets/img/landing/saas-4/integrations/03-light.png" className="d-dark-mode-block d-none my-sm-0 my-1 mx-auto" width={128} alt="Brand" />
-      </a>
-    </div>
-    {/* Swiper item */}
-    <div className="swiper-slide h-auto py-2" role="group" aria-label="4 / 5" style={{width: '198.8px', marginRight: 38}}>
-      <a href="#" className="card card-body card-hover h-100 py-sm-4 py-3 px-3 mx-2 border-0 shadow-sm rounded-pill">
-        <img src="https://silicon.createx.studio/assets/img/landing/saas-4/integrations/04-light.png" className="d-dark-mode-none d-block my-sm-0 my-1 mx-auto" width={138} alt="Brand" />
-        <img src="https://silicon.createx.studio/assets/img/landing/saas-4/integrations/04-light.png" className="d-dark-mode-block d-none my-sm-0 my-1 mx-auto" width={138} alt="Brand" />
-      </a>
-    </div>
-    {/* Swiper item */}
-    <div className="swiper-slide h-auto py-2" role="group" aria-label="5 / 5" style={{width: '198.8px', marginRight: 38}}>
-      <a href="#" className="card card-body card-hover h-100 py-sm-4 py-3 px-3 mx-2 border-0 shadow-sm rounded-pill">
-        <img src="https://silicon.createx.studio/assets/img/landing/saas-4/integrations/05-light.png" className="d-dark-mode-none d-block my-sm-0 my-1 mx-auto" width={164} alt="Brand" />
-        <img src="https://silicon.createx.studio/assets/img/landing/saas-4/integrations/05-light.png" className="d-dark-mode-block d-none my-sm-0 my-1 mx-auto" width={164} alt="Brand" />
-      </a>
-    </div>
-  </div>
-  {/* Pagination (bullets) */}
-  <div className="swiper-pagination position-static mt-4 pt-lg-3 pt-2 swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal swiper-pagination-lock"><span className="swiper-pagination-bullet swiper-pagination-bullet-active" tabIndex={0} role="button" aria-label="Go to slide 1" aria-current="true" /></div>
-  <span className="swiper-notification" aria-live="assertive" aria-atomic="true" /></div>
-     </div>
-      </div>
-     </div>
-   </section>
-
+<Hero />
 
 {/* Clients  */}
 <section className="padng-sec why-us-c py-5 mt-5" id="abt-sec">
   <div className="container">
     <div className="row d-flex align-items-center">
+    <div className="col-lg-6 col-md-12">
+        <div className="sub-hd">
+          <h2>About Us</h2>
+          <h1>
+          INNBITS <span> EMPOWERING BUSINESS</span> <span>THROUGH DIGITAL</span> TRANSFORMATION
+          </h1>
+          <p>Specialized in providing user-centric digital transformation, Innbits – a next-generation Tech studio powers business growth through the innovative and smart use of digital technology. Our services are designed to reinvent top-notch digital solutions for building a brand</p>
+        </div>
+      </div>
       <div className="col-lg-6 col-md-12">
         <div className="whyus-icn-c " id="counter">
           <div className="whyus-icn-c-dbl d-flex  justify-content-center ml-0 ml-sm-5">
@@ -103,7 +35,7 @@ export default function Home() {
               <div className="whyus-icn-c-sngl-cnt">
                 <img loading="lazy" src="https://www.revolotech.com/theme/images/sml.svg" alt />
                 <p className="m-0 p-0">Around the World with</p>
-                <h3><span className="count percent" data-count={100}>100</span><span>+</span></h3>
+                <h3><span className="count percent" data-count={70}>70</span><span>+</span></h3>
                 <h6> Clients</h6>
               </div>
             </div>
@@ -133,27 +65,27 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="col-lg-6 col-md-12">
-        <div className="sub-hd">
-          <h1>
-            Successful <span>Application Software</span> <span>Development for</span> Global clients
-          </h1>
-          <h6>Happy customers across the US, Europe, <span>Australia, Canada, New Zealand, India &amp; many more.</span> </h6>
-        </div>
-      </div>
+     
     </div>
   </div>
 </section>
 
+{/* services  */}
+{/* <Services /> */}
 
 {/* Technologies  */}
 <Technologies />
+
+
+{/* Casestudies  */}
+<Casestudies />
+
 
 {/* Testimonials  */}
 <section className="testimonial-innbits mt-5">
   <div className="container">
     <div className="row">
-      <h2 className="display-2 text-center mb-0 pb-0">Testimonials</h2>
+      <h2 className="display-2 text-center mb-0 pb-0">Success Stories</h2>
       <div className="col-lg-8 mx-auto">
         <div className="row">
         <div className="col-md-12">
@@ -259,12 +191,7 @@ export default function Home() {
           <figure className="card h-100 position-relative border-0 bg-transparent">
             <blockquote className="card-body p-0 mb-0">
               <p className="fs-lg mb-0 testimonial-para">
-              <span className="small-text">Richard Says,</span> Dolor, a eget elementum, integer nulla volutpat, nunc, sit. Quam
-                iaculis varius mauris magna sem. Egestas sed sed suscipit dolor
-                faucibus dui imperdiet at eget. Tincidunt imperdiet quis
-                hendrerit aliquam feugiat neque cras sed. Dictum quam integer
-                volutpat tellus, faucibus platea. Pulvinar turpis proin faucibus
-                at mauris. Sagittis gravida vitae porta enim.
+              <span className="small-text">Biraja Rout Says,</span> It was a great pleasure to come into partnership with Innbits Technologies. I appreciate their attention to details and their creativity in bringing my idea to life. I am so thankful in the ways they supported me in making this dream a reality.
               </p>
             </blockquote>
             <div className="row">
@@ -274,10 +201,10 @@ export default function Home() {
                 src="https://silicon.createx.studio/assets/img/avatar/01.jpg"
                 width={48}
                 className="rounded-circle"
-                alt="Ralph Edwards"
+                alt="Biraja Rout"
               />
               <div className="ps-3">
-                <h5 className="fw-semibold lh-base mb-0">Ralph Edwards</h5>
+                <h5 className="fw-semibold lh-base mb-0">Biraja Rout</h5>
                 <span className="fs-sm text-muted">
                   Head of Marketing at Lorem Company
                 </span>
@@ -321,12 +248,7 @@ export default function Home() {
           <figure className="card h-100 position-relative border-0 bg-transparent">
             <blockquote className="card-body p-0 mb-0">
               <p className="fs-lg mb-0 testimonial-para">
-              <span className="small-text">Richard Says,</span>  Mi semper risus ultricies orci pulvinar in at enim orci. Quis
-                facilisis nunc pellentesque in ullamcorper sit. Lorem blandit
-                arcu sapien, senectus libero, amet dapibus cursus quam. Eget
-                pellentesque eu purus volutpat adipiscing malesuada. Purus nisi,
-                tortor vel lacus. Donec diam molestie ultrices vitae eget
-                pulvinar fames. Velit lacus mi purus velit justo, amet.
+              <span className="small-text">Gian Ruggeri Says,</span>  <p>The way Innbits has taken us in building our Website from scratch is having a high level of polished skill.We, to the core, are completely fulfilled connecting with Innbits Team. Much obliged to you for being with us!</p>
               </p>
             </blockquote>
             <div className="row">
@@ -336,13 +258,13 @@ export default function Home() {
                 src="https://silicon.createx.studio/assets/img/avatar/01.jpg"
                 width={48}
                 className="rounded-circle"
-                alt="Ralph Edwards"
+                alt="Gian Ruggeri"
               />
               <div className="ps-3">
-                <h5 className="fw-semibold lh-base mb-0">Ralph Edwards</h5>
-                <span className="fs-sm text-muted">
+                <h5 className="fw-semibold lh-base mb-0">Gian Ruggeri</h5>
+                {/* <span className="fs-sm text-muted">
                   Head of Marketing at Lorem Company
-                </span>
+                </span> */}
               </div>
             </figcaption>
               </div>
@@ -383,13 +305,7 @@ export default function Home() {
           <figure className="card h-100 position-relative border-0 bg-transparent">
             <blockquote className="card-body p-0 mb-0">
               <p className="fs-lg mb-0 testimonial-para">
-              <span className="small-text">Richard Says,</span>  Ac at sed sit senectus massa. Massa ante amet ultrices magna
-                porta tempor. Aliquet diam in et magna ultricies mi at. Lectus
-                enim, vel enim egestas nam pellentesque et leo. Elit mi faucibus
-                laoreet aliquam pellentesque sed aliquet integer massa. Orci leo
-                tortor ornare id mattis auctor aliquam volutpat aliquet. Odio
-                lectus viverra eu blandit nunc malesuada vitae eleifend
-                pulvinar.
+              <span className="small-text">Prakash Says,</span>  It was a great pleasure to come into partnership with Innbits Technologies. I appreciate their attention to details and their creativity in bringing my idea to life.
               </p>
             </blockquote>
             <div className="row">
@@ -399,13 +315,13 @@ export default function Home() {
                 src="https://silicon.createx.studio/assets/img/avatar/01.jpg"
                 width={48}
                 className="rounded-circle"
-                alt="Ralph Edwards"
+                alt="prakash"
               />
               <div className="ps-3">
-                <h5 className="fw-semibold lh-base mb-0">Ralph Edwards</h5>
-                <span className="fs-sm text-muted">
+                <h5 className="fw-semibold lh-base mb-0">Prakash</h5>
+                {/* <span className="fs-sm text-muted">
                   Head of Marketing at Lorem Company
-                </span>
+                </span> */}
               </div>
             </figcaption>
               </div>
@@ -532,12 +448,7 @@ export default function Home() {
   </div>
 </section>
 
-
-
-
-
 {/* client logo scroll  */}
-
 <section className="mb-5 pt-md-3 pt-lg-4 pt-xl-5">
   <h2 className="h1 pt-lg-2 pt-xl-3 mb-5 text-center">Our Clients</h2>
   <div className="pb-2 pb-sm-3 pb-md-4">
@@ -962,8 +873,6 @@ export default function Home() {
   </div>
 </section>
 
-
-
 {/* call back  */}
 <section className="call-back position-relative">
   <div className="container">
@@ -1004,7 +913,7 @@ export default function Home() {
             <div className="col-lg-6">
             {/* Text input */}
           <div className="form-floating mb-4">
-          <input className="form-control call-back-input" type="text" id="fl-text" placeholder="Your name" />
+          <input className="form-control call-back-input" type="text" id="fl-text" placeholder="Your name" required />
           <label htmlFor="fl-text">Your name</label>
           </div>
             </div>
@@ -1050,7 +959,7 @@ export default function Home() {
 
             <div className="col-lg-6 text-end">
             {/* Warning solid button */}
-          <button type="submit" className="btn btn-warning">Send Message</button>
+          <button type="submit" className="btn btn-yellow-bg">Send Message</button>
 
             </div>
 
@@ -1069,10 +978,6 @@ export default function Home() {
   </div>
 </section>
 
-
-
-
-
-   </>
+</>
   )
 }

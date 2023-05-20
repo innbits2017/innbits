@@ -23,10 +23,10 @@ const Footer = () => {
            <h3>Your Business Is Our Work</h3>
            <div className="mt-lg-5">
             <p>Work With:</p>
-            <i class='bx bxl-windows fs-4 me-2'></i>
-            <i class='bx bxl-chrome fs-4 me-2' ></i>
-            <i class='bx bxl-apple fs-4 me-2' ></i>
-            <i class='bx bxl-android fs-4 me-2' ></i>
+            <i className='bx bxl-windows fs-4 me-2'></i>
+            <i className='bx bxl-chrome fs-4 me-2' ></i>
+            <i className='bx bxl-apple fs-4 me-2' ></i>
+            <i className='bx bxl-android fs-4 me-2' ></i>
            </div>
         </div>
         <div className="col-12 col-sm-6 col-lg-3">
@@ -41,11 +41,11 @@ const Footer = () => {
          <div className="mt-lg-5">
             <p className="mb-0 pb-0"> 
             <a className="text-dark text-decoration-none" href="tel:+919036082478">
-            <i class='bx bx-phone footer-icons me-2'></i>
+            <i className='bx bx-phone footer-icons me-2'></i>
              +91-9036082478 (IN)
             </a>
              </p>
-            <p> <i class='bx bx-envelope footer-icons me-2' ></i> 
+            <p> <i className='bx bx-envelope footer-icons me-2' ></i> 
             <a className="text-dark text-decoration-none" href="mailto:info@innbits.com">
             info@innbits.com
             </a>
@@ -60,9 +60,9 @@ const Footer = () => {
             <p>Weekend: Time off</p>
             </div>
             <div className="mt-lg-5 pt-lg-5">
-             <a href="#" className="social-facebook"><i class='bx bxl-facebook fs-2 me-3' ></i></a>
-             <a href="#" className="social-twitter"><i class='bx bxl-twitter fs-2 me-3'></i></a>
-             <a href="#" className="social-instagram"><i class='bx bxl-instagram fs-2 me-3' ></i></a>
+             <a href="#" className="social-facebook"><i className='bx bxl-facebook fs-2 me-3' ></i></a>
+             <a href="#" className="social-twitter"><i className='bx bxl-twitter fs-2 me-3'></i></a>
+             <a href="#" className="social-instagram"><i className='bx bxl-instagram fs-2 me-3' ></i></a>
             </div>
         </div>
         <div className="col-12 col-sm-6 col-lg-3">

@@ -1,8 +1,16 @@
 body{
     background: #f5f5f5;
 }
+.btn-yellow-bg{
+    background-color: #efc70d !important;
+}
+
+.btn-yellow{
+    color: #efc70d;
+}
+
 /* hero  */
-.innbits-hero{
+/* .innbits-hero{
     background-image: url('../public/images/home/herogradient.svg');
     width: 100%;
     height: 90vh;
@@ -41,7 +49,49 @@ body{
 .hero-bottom{
     z-index: 99;
     color: #fff;
-}
+} */
+
+
+    /* Spin animation */
+    @-webkit-keyframes hero-spin {
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+    @keyframes hero-spin {
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+    .hero-animation-spin {
+      -webkit-animation: hero-spin 35s linear infinite;
+      animation: hero-spin 35s linear infinite;
+    }
+
+    @-webkit-keyframes hero-fade {
+      0%, 100% { opacity: 0 }
+      50% { opacity: 1 }
+    }
+    @keyframes hero-fade {
+      0%, 100% { opacity: 0 }
+      50% { opacity: 1 }
+    }
+    .hero-animation-fade {
+      -webkit-animation: hero-fade 4s ease-in infinite;
+      animation: hero-fade 4s ease-in infinite;
+    }
+    .hero-animation-delay-1,
+    .hero-animation-delay-2,
+    .hero-animation-delay-3 {
+      opacity: 0;
+    }
+    .hero-animation-delay-1 { animation-delay: .75s; }
+    .hero-animation-delay-2 { animation-delay: 1.5s; }
+    .hero-animation-delay-3 { animation-delay: 2s; }
+
+  /* nav  */
 .nav-top{
     position: absolute;
     width: 100%;
@@ -692,8 +742,207 @@ footer p{
     font-size: 22px !important;
 }
 
+/* bugs  */
+
+.nav-img{
+    z-index: 99;
+}
+
+
+/* section-error  */
+.section-error{
+    padding: 4rem 2rem;
+    display: grid;
+    place-items: center;
+    width: 100%;
+  }
+  
+  .section-error .error{
+    font-size: 150px;
+    color: #efc70d;
+    text-shadow: 
+      1px 1px 1px #efc70d,    
+      2px 2px 1px #efc70d,
+      3px 3px 1px #efc70d,
+      4px 4px 1px #efc70d,
+      5px 5px 1px #efc70d,
+      6px 6px 1px #efc70d,
+      7px 7px 1px #efc70d,
+      8px 8px 1px #efc70d,
+      25px 25px 8px rgba(0,0,0, 0.2);
+  }
+  
+  .page{
+    margin: 2rem 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #444;
+  }
+  
+  .back-home{
+    display: inline-block;
+    border: 2px solid #222;
+    color: #222;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 0.75rem 1rem 0.6rem;
+    transition: all 0.2s linear;
+    box-shadow: 0 3px 8px rgba(0,0,0, 0.3);
+  }
+  .back-home:hover{
+    background: #efc70d;
+    color: #000;
+  }
+
+
+  /* services-sec  */
+ .services-sec{
+    /* height: 100vh; */
+ }
+ .service-heading{
+    font-size: 25px;
+    color: #00000077 !important;
+ }
+ .service-content-box{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px; 
+ }
+
+ .service-right-box{
+    background-color: #7b02b8;
+    padding:  0px 15px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+ }
+
+ .service-number{
+    font-size: 2.5rem;
+    color: #000000c9 !important;
+ }
+
+ .service-img-right{
+    width: 100px;
+ }
+
+
+ /* blog details */
+ .blog-post > a,
+.blog-post > p > a {
+  color: #0091ff;
+  text-decoration: none;
+}
+.blog-post > h1 {
+  font: 40px/1.1 "Manrope", sans-serif;
+    font-weight: bold;
+    margin: 9px 0;
+}
+.blog-post > h2 {
+  font: 35px/1.3 "Manrope", sans-serif;
+  margin: 2rem 0 1rem;
+  text-align: left !important;
+  font-weight: bold;
+}
+.blog-post > h3 {
+  font-size: 25px;
+}
+.blog-post > h4 {
+  font-size: 22px;
+}
+.blog-post > p {
+    margin: 20px 0;
+    line-height: 1.8em;
+    font-size: 20px;
+}
+.blog-post > ul li {
+    line-height: 1.8em;
+    font-size: 20px;
+}
+
+.blog-post img {
+    margin: 0px auto;
+    display: block;
+}
+
+.img-wrapper {  
+    width: 100%;
+    height: 100%;
+    overflow: hidden; 
+  }
+  
+  .inner-img {
+    transition: 0.3s;
+  }
+  
+  .inner-img:hover {
+    transform: scale(1.1);
+  }
+
+  .casestudy-btn{
+    border: 1px solid #fff;
+    transition: transform 0.3s
+  }
+
+  .casestudy-btn:hover{
+    color: #efc70d !important;
+  }
+  
+  /* Other styling elements, that are not necessary for the example */
+  
+  .img-wrapper {
+    display: inline-block;
+    box-sizing: border-box;
+  }
+
+@media only screen and (max-width: 425px) { 
+  .blog-post > h1 {
+    font: 30px/1 "Manrope", sans-serif;
+    margin: 9px 0;
+    font-weight: bold;
+  }
+  .blog-post > h2 {
+    font: 20px/1.3 "Manrope", sans-serif;
+    margin: 1rem 0;
+    font-weight: bold;
+  }
+  .blog-post > h3 {
+    font: 20px/1.3 "Manrope", sans-serif;
+    margin: 1rem 0;
+    font-weight: bold;
+  }
+  .blog-post > h4 {
+    font-size: 20px;
+  }
+  .blog-post > p {
+    font: 16px/1.6 "Manrope", sans-serif;
+      margin: 15px 0;
+      line-height: 1.8em;
+  }
+}
+
+
 
 /* media quories  */
+@media screen and (min-width: 991px) {
+    .nav-link-white {
+        color: #fff !important;
+        transition: 0.5s all ease;
+        padding-right: 0.875rem;
+        padding-left: 0.875rem;
+        display: block;
+        padding: 0.535rem 1rem;
+        font-weight: 600;
+        color: #3e4265;
+        text-decoration: none;
+        transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    }
+    section.hero-top {
+        margin-top: -81px !important;
+    }
+}
+
 @media screen and (max-width: 991px) {
     .hero-heading {
         font-size: 2em;
@@ -720,5 +969,16 @@ footer p{
     .ceo-bg-img-mobile{
         bottom: -4%;
         display: block;
+    }
+    .nav-link-white{
+    display: block;
+    padding: 0.535rem 1rem;
+    font-weight: 600;
+    color: #3e4265;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    }
+    .navbar-brand {
+        z-index: 9;
     }
 }

@@ -1,10 +1,10 @@
 "use client"
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+import Image from 'next/image'
 
 
-const Navbar = () => {
+const HomeAppHeader = () => {
   const [screenWidth, setScreenWidth] = useState('');
   useEffect(() => {
     setScreenWidth(window.innerWidth);
@@ -14,13 +14,19 @@ const Navbar = () => {
   const aboutUsPageClickHandler = () => screenWidth > '990' && (location.href = '/about-us');
   const aboutWorkPageClickHandler = () => screenWidth > '990' && (location.href = '/portfolio');
 
+  const [scroll, setScroll] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScroll(window.scrollY > 350);
+    });
+  }, []);
 
   return (
     <>
-      <header className='header navbar navbar-expand-lg navbar-light bg-light navbar-sticky'>
+      <header className={`${!scroll ? 'header navbar navbar-expand-lg navbar-light bg-light navbar-sticky' : 'header navbar navbar-expand-lg navbar-light'}`}>
         <div className='container px-3 py-2'>
           <a href='/' className='navbar-brand pe-3'>
-          <img src="https://cdn-bcppi.nitrocdn.com/yOvklEMEtIBFnRFqTdXKUypeOseqROKo/assets/static/optimized/rev-5312a89/wp-content/webp-express/webp-images/uploads/2021/03/innbits_logo_yellow-optimized.png.webp" alt="Neetable" className="img-fluid"  width={150} height={33} />
+          <img src="https://cdn-bcppi.nitrocdn.com/yOvklEMEtIBFnRFqTdXKUypeOseqROKo/assets/static/optimized/rev-5312a89/wp-content/webp-express/webp-images/uploads/2021/03/innbits_logo_yellow-optimized.png.webp" alt="Neetable" className="img-fluid nav-img"  width={150} height={33} />
           </a>
           <div id='navbarNav' className='offcanvas offcanvas-end'>
             <div className='offcanvas-header border-bottom'>
@@ -30,7 +36,7 @@ const Navbar = () => {
             <div className='offcanvas-body'>
               <ul className='navbar-nav ms-auto mb-2 mb-lg-0 justify-content-center w-100'>
                 <li className='nav-item dropdown'>
-                  <a href='/about-us' className='nav-link  dropdown-toggle' data-bs-toggle='dropdown' onClick={aboutUsPageClickHandler}>
+                  <a href='/about-us' className={`${scroll ? 'nav-link  dropdown-toggle' : 'nav-link-white  dropdown-toggle'}`} data-bs-toggle='dropdown' onClick={aboutUsPageClickHandler}>
                     About Us
                   </a>
                   <div className='dropdown-menu p-0 '>
@@ -75,7 +81,7 @@ const Navbar = () => {
                             Full cycle app development
                           </a>
                         </div>
-                        <ul className='mb-0 ' style={{ 'listStyleType': 'disc' }}>
+                        <ul className='mb-0 ' style={{ 'list-style-type': 'disc' }}>
                           <li>
                             <a href='/mvp-development-services' className='dropdown-item text-decoration-none'>
                               MVP
@@ -96,8 +102,10 @@ const Navbar = () => {
                     </div>
                   </div>
                 </li>
+              
+         
                 <li className='nav-item dropdown'>
-                  <a href='/services' className='nav-link  dropdown-toggle' data-bs-toggle='dropdown' onClick={navBarClickHandler}>
+                  <a href='/services' className={`${scroll ? 'nav-link  dropdown-toggle' : 'nav-link-white  dropdown-toggle'}`} data-bs-toggle='dropdown' onClick={navBarClickHandler}>
                     Services
                   </a>
                   <div className='dropdown-menu p-0'>
@@ -198,8 +206,10 @@ const Navbar = () => {
                     </div>
                   </div>
                 </li>
+
+
                 <li className='nav-item dropdown'>
-                  <a href='' onClick={aboutWorkPageClickHandler} className='nav-link  dropdown-toggle' data-bs-toggle='dropdown'>
+                  <a href='' onClick={aboutWorkPageClickHandler} className={`${scroll ? 'nav-link  dropdown-toggle' : 'nav-link-white  dropdown-toggle'}`} data-bs-toggle='dropdown'>
                     Our Work
                   </a>
                   <div className='dropdown-menu p-0'>
@@ -226,21 +236,21 @@ const Navbar = () => {
                   </div>
                   {/* </div> */}
                 </li>
+
                 <li className='nav-item' style={{ marginRight: '15px' }}>
-                  <a href='/blog' className='nav-link'>
+                  <a href='/blog' className={`${scroll ? 'nav-link' : 'nav-link-white'}`}>
                     Blog
                   </a>
                 </li>
                 <li className='nav-item contact-new-item'>
-                  <a href='/contact-us' className='btn btn-yellow-bg shadow-warning btn-md'>
+                  <a href='/contact-us' className='btn btn-yellow-bg shadow-primary btn-md'>
                     Contact Us
                   </a>
                 </li>
               </ul>
             </div>
           </div>
-          <button type='button' className='navbar-toggler' data-bs-toggle='offcanvas' data-bs-target='#navbarNav' 
-          aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation'>
+          <button type='button' className='navbar-toggler' data-bs-toggle='offcanvas' data-bs-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation'>
             <span className='navbar-toggler-icon'></span>
           </button>
         </div>
@@ -248,4 +258,4 @@ const Navbar = () => {
     </>
   );
 };
-export default Navbar;
+export default HomeAppHeader;

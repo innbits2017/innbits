@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
 
 .text-gradient-primary {
   background: linear-gradient(to right, #6366f1, #8b5cf6, #d946ef);
@@ -49,8 +49,8 @@
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 88, 92, 123;
   --bs-body-bg-rgb: 255, 255, 255;
-  --bs-font-sans-serif: "Manrope", sans-serif;
-  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --bs-font-sans-serif: 'Manrope', sans-serif;
+  --bs-font-monospace: Hind, SFMono-Regular, Menlo, Monaco, Consolas, 'Hind', "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
   --bs-body-font-size: 1rem;
@@ -64,6 +64,14 @@
 ::after,
 ::before {
   box-sizing: border-box;
+}
+
+body h1,h2,h3,h4,h5,h6 {
+  font-family: 'Manrope', sans-serif !important;
+}
+
+body p,a,ul,li,strong,b,span{
+  font-family: 'Hind', sans-serif !important;
 }
 
 body {
@@ -15723,8 +15731,8 @@ hr.dropdown-divider {
 }
 
 .card-hover-primary:hover {
-  border-color: #0091ff !important;
-  background-color: #0091ff !important;
+  border-color: #0b151d !important;
+  background-color: #0b151d !important;
 }
 
 .card-hover-primary:hover .card-title {
